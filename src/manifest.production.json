@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Test-Vue-Again",
+    "description": "Testinngggg ",
+    "version": "0.0.1",
+    "background": {
+        "service_worker": "/background.js"
+    },
+    "permissions": ["activeTab"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "/content.js"
+            ]
+        }
+    ]
+}
